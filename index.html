@@ -1,0 +1,59 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="./lib/jquery-2.1.4.min.js"></script>
+    <script src="./lib/mithril.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+	<script type="text/javascript" src="./lib/instafeed.js"></script>
+    <link href="./lib/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/style.css">
+    <link rel="icon" type="imag/ico" href="https://djrbatmgo1l7z.cloudfront.net/assets/favicon-29811548b14ff5bf245d365aa59fd27459ad15db9dc6f7a1bce3c9ff621d6f69.ico">
+    <title>Instagram Manager</title></head>
+
+<body>
+    <div id="bodywrapper">
+        <div id="spinner"><div class="loader"></div></div>
+        <div id="loggedIn"></div>
+        <div id="siteHeader">
+            <div id="headlineAndLogo"><img src="./assets/bellroylogo.png"><h1>Instagram Manager</h1></div>
+            <div id="login">
+                <input id="username" placeholder="E-mail"></input>
+                <input id="password" placeholder="Password" type="password"></input>
+                <button>Login</button>
+            </div>
+        </div>
+            <div id="contentWrapper">
+            <div id="savedFeeds"><div>My Saved Feeds</div>        <div id="savedCollectionsWrapper"></div></div>
+            <div>
+                <button id="bellroybutton">@bellroy's instagram photos</button>
+                <div id="sortBy">Sort by: 
+                    <select>
+                        <option value="most-recent" selected="">Most Recent</option>
+                        <option value="most-liked">Most Liked</option>
+                        <option value="most-commented">Most Commented</option>
+                    </select>
+                </div>
+            </div>
+            <div id="searchwrapper">
+                <input id="searchbar" placeholder="Enter your query here">
+                <button id="searchbutton">Search</button>
+            </div>
+            <div id='manipulateWrapper'>                
+                <button id="viewSelected">Review selected</button>
+                <div id="name">Save as:</div><input id="nameInput" placeholder="Enter a product slug here"></input>
+                <button id="saveSelected">Save selected</button>
+                <button id="clearImages">Clear images</button>
+            </div>
+        </div>
+        <div id="instafeedWrapper">
+    	   <div id="instafeed"></div>
+        </div>
+        <div id="submitWrapper" class="ishidden"><button id="submitSelected">Tell Sam to update</button></div>
+        </div>
+        <div id="footer">
+            <button id="loadMore">Load More</button>
+            <div id="footerCopy">If you've discovered a bug, please send a message along with a screenshot to <a href="mailto:samuel.thomas@qubit.com">samuel.thomas@qubit.com</a>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body></html>
